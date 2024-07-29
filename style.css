@@ -40,3 +40,7 @@ body {
 .user-flash {
     background-color: white;
 }
+
+.Game-Over {
+    background-color: rgb(170, 22, 22);
+}
