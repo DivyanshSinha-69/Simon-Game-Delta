@@ -59,7 +59,7 @@ function checkAns() {
     }
     else
     {
-        h2.innerText = `Game Over! Press any key to start.`;
+        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start.`;
         let body = document.querySelector("body");
         body.classList.add("Game-Over");
         setTimeout(function() {
