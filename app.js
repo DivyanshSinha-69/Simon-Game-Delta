@@ -45,16 +45,12 @@ function levelUp() {
     gameFlash(randBtn);
 }
 
-function checkAns() {
-    let idx = level-1;
-
+function checkAns(idx) {
     if(userSeq[idx] === gameSeq[idx])
     {
         if(userSeq.length==gameSeq.length)
         {
-            setTimeout(function() {
-                levelUp();
-            }, 1000);
+            setTimeout(levelUp, 1000);
         }
     }
     else
@@ -76,10 +72,9 @@ function checkAns() {
 function btnPress() {
     let btn = this;
     userSeq.push(this.id);
-    console.log(userSeq);
     userFlash(btn);
 
-    checkAns();
+    checkAns(userSeq.length - 1);
 }
 
 let allBtns = document.querySelectorAll(".btn");
